@@ -107,26 +107,3 @@ public class Solution {
         }
     }
 }
-class Solution {
-    public void rotate(int[] nums, int k) {
-        int[] temp = new int[k];
-        int z = k;
-        for(int i = nums.length-1;i>k; i--){
-            temp[--z] = nums[i];
-        }
-        /*for(int i = 0; i<temp.length; i++){
-            System.out.print(temp[i]);
-        }*/
-        rightRoate(nums, k);
-        for(int j=0; j<k; j++){
-            nums[j] = temp[j];
-        }
-        
-    }
-    
-    void rightRoate(int[] nums, int k){
-        for(int i =nums.length-1; i>=k; i--){
-            nums[i] = nums[i-k];
-        }
-    }
-}
